@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 40px;
+  color: $default;
+  @extend %dmsans-500;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container__big {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  font-size: 14px;
+  line-height: 32px;
+  color: $footer-color;
+  @extend %rubik-400;
+}
+
+.top {
+  background-color: #edf1f4;
+  &__inner {
+    padding: 35px 0;
+    text-align: center;
+  }
+}
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 36px;
+    line-height: 24px;
+    color: #222933;
+    @extend %myriadpro-400;
+  }
+  &__item {
+    margin: 0 14px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #888c91;
+    @extend %rubik-400;
+    margin-top: 10px;
+    position: relative;
+    &::after {
+      content: '/';
+      top: 4px;
+      right: -17px;
+      font-size: 14px;
+      line-height: 24px;
+      color: #888c91;
+      position: absolute;
+    }
+    &:last-child {
+      color: #1a1a1a;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__text-link {
+    color: inherit;
+  }
+}
