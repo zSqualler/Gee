@@ -135,21 +135,21 @@ const btnSwitch = document.querySelector('.shop__grid-switch');
 const btnSwitchOut = document.querySelector('.shop__grid-switchout');
 const items = document.querySelector('.product__items');
 
-btnSwitch.addEventListener('click', function () {
+if (btnSwitch) {
+  btnSwitch.addEventListener('click', function () {
   items.classList.add('product__items-shop--list');
   items.classList.remove('product__items-shop--grid');
-});
-btnSwitchOut.addEventListener('click', function () {
-  items.classList.add('product__items-shop--grid');
-  items.classList.remove('product__items-shop--list');
-});
-
-btnSwitch.addEventListener('click', function () {
   btnSwitchOut.classList.remove('shop__grid-switcher');
   btnSwitch.classList.add('shop__grid-switcher');
-});
-btnSwitchOut.addEventListener('click', function () {
+  });
+}
+
+if (btnSwitchOut) {
+  btnSwitchOut.addEventListener('click', function () {
+  items.classList.add('product__items-shop--grid');
+  items.classList.remove('product__items-shop--list');
   btnSwitchOut.classList.add('shop__grid-switcher');
   btnSwitch.classList.remove('shop__grid-switcher');
-});
+  });
+}
   
